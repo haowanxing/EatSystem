@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>User</servlet-name>
+        <servlet-class>User.User</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Good</servlet-name>
+        <servlet-class>Good.Good</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpLoader</servlet-name>
+        <servlet-class>FileUpLoad.UpLoader</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Admin</servlet-name>
+        <servlet-class>User.Admin</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Good</servlet-name>
+        <url-pattern>/Good</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>User</servlet-name>
+        <url-pattern>/User</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpLoader</servlet-name>
+        <url-pattern>/fileupload</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Admin</servlet-name>
+        <url-pattern>/admin/DoLogin</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
